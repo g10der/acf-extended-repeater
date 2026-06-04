@@ -1,6 +1,6 @@
 === ACF Extended Repeater ===
 
-Contributors: yourwordpressusername
+Contributors: Jitender Kumar
 Tags: acf, repeater, advanced custom fields, custom fields, acf free
 Requires at least: 6.0
 Tested up to: 6.8
