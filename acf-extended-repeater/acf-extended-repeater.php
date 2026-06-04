@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: ACF Extended Repeater
- * Plugin URI: https://wordpress.org/plugins/acf-extended-repeater/
+ * Plugin URI: https://github.com/g10der/acf-extended-repeater
  * Description: Adds a lightweight repeater field to Advanced Custom Fields Free.
  * Version: 1.0.0
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Jitender kumar
- * Author URI: 
+ * Author URI: https://github.com/g10der
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: acf-extended-repeater
