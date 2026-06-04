@@ -28,7 +28,7 @@ A lightweight repeater field extension for Advanced Custom Fields (ACF) Free.
 ## Usage
 
 ```php
-$rows = get_field( 'your_feild_key' );
+$rows = get_field( 'your_field_key' );
 
 if ( $rows ) {
 
