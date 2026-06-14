@@ -78,57 +78,33 @@
     margin-bottom:12px;
 }
 
-.aer-subfield-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/*
+|--------------------------------------------------------------------------
+| Repeater Field Collapse
+|--------------------------------------------------------------------------
+*/
 
-    padding:12px 15px;
-
-    background:#f6f7f7;
-
-    cursor:pointer;
+.acf-field[data-type="aer_repeater"] > .acf-label{
+    position:relative;
+    padding-left:20px;
+    cursor: pointer;
+}
+.acf-field[data-type="aer_repeater"] > .acf-label > label{
+    cursor: pointer;
 }
 
-.aer-subfield-left{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.acf-field[data-type="aer_repeater"] > .acf-label:before{
+    content:"▼";
+    position:absolute;
+    left:0;
+    top:0;
+    transition:transform .2s ease;
 }
 
-.aer-subfield-arrow{
-    transition:.2s;
-}
-
-.aer-subfield-card.collapsed
-.aer-subfield-arrow{
+.acf-field[data-type="aer_repeater"].aer-field-collapsed > .acf-label:before{
     transform:rotate(-90deg);
 }
 
-.aer-subfield-title{
-    font-weight:600;
-}
-
-.aer-subfield-type-badge{
-    color:#666;
-    margin-right:10px;
-}
-
-.aer-subfield-body{
-    padding:15px;
-}
-
-.aer-subfield-card.collapsed
-.aer-subfield-body{
+.acf-field[data-type="aer_repeater"].aer-field-collapsed > .acf-input{
     display:none;
-}
-
-.aer-subfield-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr 220px;
-    gap:15px;
-}
-.aer-subfields-builder{
-	padding-left: 72px;
-	padding-right: 72px;
 }
