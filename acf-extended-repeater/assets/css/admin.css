@@ -78,6 +78,61 @@
     margin-bottom:12px;
 }
 
+.aer-subfield-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 15px;
+
+    background:#f6f7f7;
+
+    cursor:pointer;
+}
+
+.aer-subfield-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.aer-subfield-arrow{
+    transition:.2s;
+}
+
+.aer-subfield-card.collapsed
+.aer-subfield-arrow{
+    transform:rotate(-90deg);
+}
+
+.aer-subfield-title{
+    font-weight:600;
+}
+
+.aer-subfield-type-badge{
+    color:#666;
+    margin-right:10px;
+}
+
+.aer-subfield-body{
+    padding:15px;
+}
+
+.aer-subfield-card.collapsed
+.aer-subfield-body{
+    display:none;
+}
+
+.aer-subfield-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 220px;
+    gap:15px;
+}
+.aer-subfields-builder{
+	padding-left: 72px;
+	padding-right: 72px;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Repeater Field Collapse
