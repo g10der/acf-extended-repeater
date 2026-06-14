@@ -21,13 +21,22 @@ jQuery(document).ready(function ($) {
 }
 function updateRowNumbers() {
 
-    $('.aer-repeater-rows .aer-repeater-row').each(function(index){
+    $('.aer-repeater-wrapper').each(function(){
 
         $(this)
-            .find('.aer-row-number')
-            .text(
-                aerRepeater.row + ' #' + (index + 1)
-            );
+            .find('.aer-repeater-rows > .aer-repeater-row')
+            .each(function(index){
+
+                $(this)
+                    .find('.aer-row-number')
+                    .first()
+                    .text(
+                        aerRepeater.row +
+                        ' #' +
+                        (index + 1)
+                    );
+
+            });
 
     });
 
@@ -247,9 +256,17 @@ rowsContainer.sortable('refresh');
 
 if (typeof jQuery.fn.sortable !== 'undefined') {
 
-    $('.aer-repeater-rows').sortable({
-        handle: '.aer-repeater-handle'
-    });
+   $('.aer-repeater-rows').sortable({
+
+    handle: '.aer-repeater-handle',
+
+    update: function(){
+
+        updateRowNumbers();
+
+    }
+
+});
 
 }
 
@@ -851,7 +868,17 @@ $(document).on(
 
     }
 );
+$(document).on(
+    'click',
+    '.acf-field[data-type="aer_repeater"] > .acf-label label',
+    function(){
 
+        $(this)
+            .closest('.acf-field[data-type="aer_repeater"]')
+            .toggleClass('aer-field-collapsed');
+
+    }
+);
 
 updateRowNumbers();
 });
