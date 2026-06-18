@@ -1,0 +1,165 @@
+
+
+.aer-repeater-handle {
+    cursor: move;
+    font-size: 18px;
+    user-select: none;
+}
+
+.aer-repeater-row input {
+    flex: 1;
+}
+
+.aer-subfield {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.aer-subfield input,
+.aer-subfield select {
+    min-width: 180px;
+}
+.aer-hidden-setting{
+    display:none !important;
+}
+
+.aer-repeater-row{
+    margin-bottom:15px;
+    border:1px solid #ccd0d4;
+    background:#fff;
+}
+
+.aer-repeater-handle{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 16px;
+
+    background:#f6f7f7;
+    border-bottom:1px solid #ccd0d4;
+
+    cursor:pointer;
+}
+
+.aer-row-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.aer-row-toggle{
+    font-size:12px;
+    transition:.2s;
+}
+
+.aer-row-number{
+    font-weight:600;
+    font-size:14px;
+}
+
+.aer-repeater-fields{
+    padding:20px;
+}
+
+.aer-collapsed .aer-repeater-fields{
+    display:none;
+}
+
+.aer-collapsed .aer-row-toggle{
+    transform:rotate(-90deg);
+}
+
+.aer-subfield-card{
+    border:1px solid #ccd0d4;
+    background:#fff;
+    margin-bottom:12px;
+}
+
+.aer-subfield-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 15px;
+
+    background:#f6f7f7;
+
+    cursor:pointer;
+}
+
+.aer-subfield-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.aer-subfield-arrow{
+    transition:.2s;
+}
+
+.aer-subfield-card.collapsed
+.aer-subfield-arrow{
+    transform:rotate(-90deg);
+}
+
+.aer-subfield-title{
+    font-weight:600;
+}
+
+.aer-subfield-type-badge{
+    color:#666;
+    margin-right:10px;
+}
+
+.aer-subfield-body{
+    padding:15px;
+}
+
+.aer-subfield-card.collapsed
+.aer-subfield-body{
+    display:none;
+}
+
+.aer-subfield-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 220px;
+    gap:15px;
+}
+.aer-subfields-builder{
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Repeater Field Collapse
+|--------------------------------------------------------------------------
+*/
+
+.acf-field[data-type="g10der_repeater"] > .acf-label{
+    position:relative;
+    padding-left:20px;
+    cursor: pointer;
+}
+.acf-field[data-type="g10der_repeater"] > .acf-label > label{
+    cursor: pointer;
+}
+
+.acf-field[data-type="g10der_repeater"] > .acf-label:before{
+    content:"▼";
+    position:absolute;
+    left:0;
+    top:0;
+    transition:transform .2s ease;
+}
+
+.acf-field[data-type="g10der_repeater"].aer-field-collapsed > .acf-label:before{
+    transform:rotate(-90deg);
+}
+
+.acf-field[data-type="g10der_repeater"].aer-field-collapsed > .acf-input{
+    display:none;
+}
